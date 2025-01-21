@@ -72,7 +72,7 @@ generate_button.addEventListener("click", function() {
     chartData = [];
     for(let i = 0; i < 6; i++)
     {
-        chartData.push(getRandomInt(1,20));
+        chartData.push(getRandomInt(1,30));
     }
     myChart.destroy();
     myChart = createChart(chartData);
