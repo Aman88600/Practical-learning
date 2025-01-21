@@ -40,8 +40,9 @@ function createChart(data) {
 let myChart = createChart(chartData);
 
 // Button to sort data
-const updateBtn = document.getElementById("updateBtn");
-updateBtn.addEventListener("click", function() {
+const sort_button = document.getElementById("sort_button");
+sort_button.addEventListener("click", function() {
+    // sorting
     for(let i = 0; i < 6; i++) 
         {
         // finding the smallest number
@@ -58,7 +59,21 @@ updateBtn.addEventListener("click", function() {
         let current_number = chartData[i];
         chartData[i] = smallest_number;
         chartData[smallest_number_index] = current_number; 
-        myChart.destroy();
-        myChart = createChart(chartData);
     }
+    myChart.destroy();
+    myChart = createChart(chartData);
+});
+
+
+// Button to generate new data
+
+const generate_button = document.getElementById("generate_button");
+generate_button.addEventListener("click", function() {
+    chartData = [];
+    for(let i = 0; i < 6; i++)
+    {
+        chartData.push(getRandomInt(1,20));
+    }
+    myChart.destroy();
+    myChart = createChart(chartData);
 });
