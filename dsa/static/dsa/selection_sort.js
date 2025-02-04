@@ -5,6 +5,8 @@ function getRandomInt(min, max) {
 }
 let bar_number = 100;
 let max_number = 100;
+
+
 for (let i = 0; i < bar_number; i++) {
     chartData.push(getRandomInt(1, max_number));
 }
